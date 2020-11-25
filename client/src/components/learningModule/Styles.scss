@@ -1,0 +1,48 @@
+@import '../../styles/utils/colors';
+@import '../../styles/utils/mixins';
+@import '../../styles/utils/breakpoints';
+
+.learningModule {
+    &__header {
+        text-align: center;
+    }
+
+    &__title {
+        margin: 25px 10px;
+        color: $morning-sky;
+        font-weight: 600;
+        font-size: 1.5em;
+    }
+
+    &__subHeader{
+        @include subheader;
+        min-height: 42px;
+    }
+  
+    &__answerArea {
+        background-color: white;
+        box-shadow: 0px 0px 20px -15px;
+        padding: 0px 0px 20px 0;
+        border-radius: 10px;
+        display: grid;
+        justify-content: center;
+        @media only screen and (max-width: $tablet) {
+            border-radius: unset;
+        }
+
+    }
+
+    &__selections{ 
+        padding: 30px 0;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10px;
+    }
+
+    &__submitButtonContainer {
+        height: 50px;
+        .submitButton {
+            float: right;
+        }
+    }
+}
