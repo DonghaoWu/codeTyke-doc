@@ -8,4 +8,4 @@
 
 - [Part2 - Add progress bar.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part2.md)
 
-- [Part3 - Add loader.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part2.md)   
+- [Part3 - Add loader.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part3.md)   
