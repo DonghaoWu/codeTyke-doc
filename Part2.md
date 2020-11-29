@@ -4,7 +4,8 @@
 
 1. Html part:
 
-    - Add component.
+- Add component.
+
     __`Location:./client/src/components/learningModule/LearningModule.js`__
 
     ```jsx
@@ -15,7 +16,8 @@
     <ProgressBar totalQuestions={quizData.totalQuestions} id={currentQuestion.id} />
     ```
 
-    - Create component.
+- Create component.
+
     __`Location:./client/src/components/progressBar/ProgressBar.js`__
 
     ```jsx
@@ -37,6 +39,8 @@
     ```
 
 2. Css part:
+
+    __`Location:./client/src/components/progressBar/Style.scss`__
 
     ```css
     @import '../../styles/utils/colors';
@@ -66,7 +70,7 @@
                 position: absolute;
             }
         }
-        
+
         &--fill {
             transition: width ease .5s;
             height: 100%;
