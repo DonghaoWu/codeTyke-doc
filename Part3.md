@@ -129,7 +129,7 @@
             padding-left: 14%;
 
             @media only screen and (max-width: $mobile) {
-            padding-left: 40%;
+                padding-left: 40%;
             }
         }
         
