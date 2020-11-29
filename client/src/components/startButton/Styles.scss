@@ -1,6 +1,6 @@
 @import '../../styles/utils/colors';
 
-.submitButton{
+.startButton{
   text-align: center;
   color: white;
   line-height: 50px;
@@ -10,8 +10,4 @@
   background-color: $grass-blade;
   padding: 0 2em;
   cursor: pointer;
-
-  &--inactive{
-    background-color: $elephant-paw;
-  }
 }

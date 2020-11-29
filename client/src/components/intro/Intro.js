@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../button/Button';
+import StartButton from '../startButton/StartButton';
 
 import './Styles.scss';
 
@@ -13,11 +13,11 @@ const Intro = ({ gameStatus, setGameStatus }) => {
             <div className="introContainer__message">
                 {gameStatus.message}
             </div>
-            <div className="introContainer__submitButton">
-                <Button label="start" handleSubmit={() => setGameStatus({ loadIntro: false })} />
+            <div className="introContainer__startButton">
+                <StartButton label="start" handleSubmit={() => setGameStatus({ loadIntro: false })} />
             </div>
         </div>
     )
 }
 
-export default Intro
+export default Intro;

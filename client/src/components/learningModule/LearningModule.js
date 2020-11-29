@@ -2,14 +2,16 @@ import React, { Fragment } from 'react';
 import axios from 'axios';
 
 import SelectionBox from '../selectionBox/SelectionBox';
-import Button from '../button/Button';
 import ProgressBar from '../progressBar/ProgressBar';
+import SubmitButton from '../submitButton/SubmitButton';
 
 import './Styles.scss';
 
 const LearningModule = ({ setGameStatus }) => {
   const [currentQuestionId, setCurrentQuestionId] = React.useState(0);
   const [quizData, setQuizData] = React.useState({});
+  const [loading, setLoading] = React.useState(false);
+
   let currentQuestion = quizData.questionArr ? quizData.questionArr[currentQuestionId] : {};
   React.useEffect(() => {
     getQuizData();
@@ -27,12 +29,17 @@ const LearningModule = ({ setGameStatus }) => {
 
   const handleSubmit = () => {
     if (currentQuestionId < quizData.totalQuestions - 1) {
-      setCurrentQuestionId(currentQuestionId + 1);
+      setLoading(true);
+      setTimeout(() => {
+        setCurrentQuestionId(currentQuestionId + 1);
+        setLoading(false);
+      }, 1000)
     } else {
       setCurrentQuestionId(0);
       setGameStatus({ message: "Great Job! Play again.", loadIntro: true });
     }
   }
+
   let possibleAnswers = [];
   if (currentQuestion.possibleAnswers) {
     possibleAnswers = currentQuestion.possibleAnswers.map((answer, index) => {
@@ -45,7 +52,7 @@ const LearningModule = ({ setGameStatus }) => {
     <div className="learningModule">
       {currentQuestion.title &&
         <Fragment>
-        <ProgressBar totalQuestions={quizData.totalQuestions} id={currentQuestion.id} />
+          <ProgressBar totalQuestions={quizData.totalQuestions} id={currentQuestion.id} />
           <div className="learningModule__header">
             <div className="learningModule__title">
               {currentQuestion.title}
@@ -60,7 +67,7 @@ const LearningModule = ({ setGameStatus }) => {
               {possibleAnswers}
             </div>
             <div className="learningModule__submitButtonContainer">
-              <Button label="Submit" inactive handleSubmit={handleSubmit} />
+              <SubmitButton label="Submit" handleSubmit={handleSubmit} loading={loading} />
             </div>
           </div>
         </Fragment>
