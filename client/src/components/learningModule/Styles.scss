@@ -58,14 +58,19 @@
     }
 
     &__submitButtonContainer {
-        width:90%;
+        width:95%;
         height: 50px;
-        margin:0 5%;
+
         .submitButton {
             float: right;
         }
 
+        @media only screen and (max-width: $tablet) {
+            width:85%;
+        }
+
         @media only screen and (max-width: $mobile) {
+            width:90%;
             .submitButton {
                 float: none;
             }

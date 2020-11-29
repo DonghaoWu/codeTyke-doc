@@ -24,7 +24,6 @@
     ```scss
     @media only screen and (max-width: $tablet) {
         width: 40%; // add
-        max-width: 230px; // add
         margin:1%; // add
 
         &__image {
@@ -91,16 +90,21 @@
 
     ```scss
     &__submitButtonContainer {
-        width:90%; // add
+        width:95%;
         height: 50px;
-        margin:0 5%;
+
         .submitButton {
             float: right;
         }
 
+        @media only screen and (max-width: $tablet) {
+            width:85%;
+        }
+
         @media only screen and (max-width: $mobile) {
+            width:90%;
             .submitButton {
-                float: none; // add
+                float: none;
             }
         }
     }
