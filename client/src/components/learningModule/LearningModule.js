@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import SelectionBox from '../selectionBox/SelectionBox';
 import Button from '../button/Button';
+import ProgressBar from '../progressBar/ProgressBar';
 
 import './Styles.scss';
 
@@ -44,6 +45,7 @@ const LearningModule = ({ setGameStatus }) => {
     <div className="learningModule">
       {currentQuestion.title &&
         <Fragment>
+        <ProgressBar totalQuestions={quizData.totalQuestions} id={currentQuestion.id} />
           <div className="learningModule__header">
             <div className="learningModule__title">
               {currentQuestion.title}
