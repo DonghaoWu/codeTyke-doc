@@ -6,7 +6,7 @@
 
 1. Start button:
 
-- Create component.
+    - Create component.
 
     __`Location:./client/src/components/startButton/StartButton.js`__
 
@@ -25,7 +25,7 @@
     export default StartButton;
     ```
 
-- scss.
+    - scss.
 
     __`Location:./client/src/components/startButton/Styles.scss`__
 
@@ -45,7 +45,7 @@
     }
     ```
 
-- Add component.
+    - Add component.
 
     __`Location:./client/src/components/intro/Intro.js`__
 
@@ -77,7 +77,7 @@
 
 2. Submit button:
 
-- Create component.
+    - Create component.
 
     __`Location:./client/src/components/submitButton/SubmitButton.js`__
 
@@ -104,7 +104,7 @@
     export default SubmitButton;
     ```
 
-- scss.
+    - scss.
 
     __`Location:./client/src/components/submitButton/Styles.scss`__
 
@@ -146,7 +146,7 @@
     }
     ```
 
-- Add component.
+    - Add component.
 
     __`Location:./client/src/components/learningModule/LearningModule.js`__
 
