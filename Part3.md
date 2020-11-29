@@ -110,6 +110,7 @@
 
     ```scss
     @import '../../styles/utils/colors';
+    @import '../../styles/utils/breakpoints';
 
     .submitButton{
         color: white;
@@ -126,6 +127,10 @@
             display: flex;
             align-items: center;
             padding-left: 14%;
+
+            @media only screen and (max-width: $mobile) {
+            padding-left: 40%;
+            }
         }
         
         &__loader{

@@ -102,7 +102,7 @@
         }
 
         @media only screen and (max-width: $mobile) {
-            width:90%; // add
+            width:88%; // add
             .submitButton {
                 float: none; // add
             }
