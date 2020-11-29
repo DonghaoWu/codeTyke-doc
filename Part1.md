@@ -1,4 +1,4 @@
-## Part 1: Responsive Layout
+# Part 1: Responsive Layout
 
 - #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
 

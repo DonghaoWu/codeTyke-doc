@@ -1,4 +1,4 @@
-## Part 2: Add progress bar 
+# Part 2: Add progress bar 
 
 - #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
 

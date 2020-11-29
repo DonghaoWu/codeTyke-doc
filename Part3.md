@@ -1,4 +1,4 @@
-## Part 3: Add loader
+# Part 3: Add loader
 
 - 注意，在这一章节首先要做的是把 Button 分成两个部分处理，一个是 StartButton component， 另外一个是 SubmitButton component。
 
