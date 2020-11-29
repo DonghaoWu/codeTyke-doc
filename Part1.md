@@ -3,6 +3,7 @@
 - #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
 
 1. For 768px and less:
+
     Answers are arranged in a grid of 2x2 elements.
 
     __`Location:./client/src/components/LearningModule/Styles.scss`__
@@ -43,7 +44,7 @@
 
 2. For 420px and less:
 
-- Don't display the subheader on each question. 
+    - Don't display the subheader on each question. 
 
     __`Location:./client/src/components/LearningModule/Styles.scss`__
 
@@ -58,7 +59,7 @@
     }
     ```
 
-- White container for the answers is removed.
+    - White container for the answers is removed.
 
     __`Location:./client/src/components/LearningModule/Styles.scss`__
 
@@ -84,7 +85,7 @@
     }
     ```
 
-- Button for answer submission is full-width.
+    - Button for answer submission is full-width.
 
     __`Location:./client/src/components/LearningModule/Styles.scss`__
 
@@ -110,7 +111,7 @@
     }
     ```
 
-- Center the logo in the navbar.
+    - Center the logo in the navbar.
 
     __`Location:./client/src/components/Navbar/Styles.scss`__
 
@@ -126,7 +127,7 @@
     }
     ```
 
-- Align the title to the left.
+    - Align the title to the left.
 
     __`Location:./client/src/components/LearningModule/Styles.scss`__
 
@@ -146,3 +147,5 @@
 ### 备注：
 
 1. 在本修改中，还有一个修改 html 部分的位置在 __`/selectionBox/Styles.scss`__ ，增加了一个新的 div, `className='selectionBox__checkboxTextContainer'`，所以要结合两个文件（`SelectionBox.js` 和 `Styles.scss`）才能理解整体的变化。
+
+- #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)

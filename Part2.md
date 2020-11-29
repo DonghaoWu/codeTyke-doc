@@ -4,7 +4,7 @@
 
 1. Html part:
 
-- Add component.
+    - Add component.
 
     __`Location:./client/src/components/learningModule/LearningModule.js`__
 
@@ -16,7 +16,7 @@
     <ProgressBar totalQuestions={quizData.totalQuestions} id={currentQuestion.id} />
     ```
 
-- Create component.
+    - Create component.
 
     __`Location:./client/src/components/progressBar/ProgressBar.js`__
 
@@ -81,3 +81,5 @@
         }
     }
     ```
+
+- #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
