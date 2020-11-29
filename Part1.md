@@ -5,7 +5,7 @@
 1. For 768px and less:
     Answers are arranged in a grid of 2x2 elements.
 
-    `Location:./client/src/components/LearningModule/Styles.scss`
+    __`Location:./client/src/components/LearningModule/Styles.scss`__
 
     ```scss
     &__selections{ 
@@ -19,7 +19,7 @@
     }
     ```
 
-    `Location:./client/src/components/selectionBox/Styles.scss`
+    __`Location:./client/src/components/selectionBox/Styles.scss`__
 
     ```scss
     @media only screen and (max-width: $tablet) {
@@ -46,7 +46,7 @@
 
 - Don't display the subheader on each question. 
 
-    `Location:./client/src/components/LearningModule/Styles.scss`
+    __`Location:./client/src/components/LearningModule/Styles.scss`__
 
     ```scss
     &__subHeader{
@@ -61,7 +61,7 @@
 
 - White container for the answers is removed.
 
-    `Location:./client/src/components/LearningModule/Styles.scss`
+    __`Location:./client/src/components/LearningModule/Styles.scss`__
 
     ```scss
     &__answerArea {
@@ -87,7 +87,7 @@
 
 - Button for answer submission is full-width.
 
-    `Location:./client/src/components/LearningModule/Styles.scss`
+    __`Location:./client/src/components/LearningModule/Styles.scss`__
 
     ```scss
     &__submitButtonContainer {
@@ -108,7 +108,7 @@
 
 - Center the logo in the navbar.
 
-    `Location:./client/src/components/Navbar/Styles.scss`
+    __`Location:./client/src/components/Navbar/Styles.scss`__
 
     ```scss
     #navbarContainer{
@@ -124,7 +124,7 @@
 
 - Align the title to the left.
 
-    `Location:./client/src/components/LearningModule/Styles.scss`
+    __`Location:./client/src/components/LearningModule/Styles.scss`__
 
     ```scss
     &__title {
@@ -141,4 +141,4 @@
 
 ### 备注：
 
-1. 在本修改中，还有一个修改 html 部分的位置在`/selectionBox/Styles.scss`，增加了一个新的 div, `className='selectionBox__checkboxTextContainer'`，所以要结合两个文件（`SelectionBox.js` 和 `Styles.scss`）才能理解整体的变化。
+1. 在本修改中，还有一个修改 html 部分的位置在 __`/selectionBox/Styles.scss`__ ，增加了一个新的 div, `className='selectionBox__checkboxTextContainer'`，所以要结合两个文件（`SelectionBox.js` 和 `Styles.scss`）才能理解整体的变化。
