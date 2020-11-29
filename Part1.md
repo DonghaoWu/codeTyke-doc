@@ -42,7 +42,7 @@
 
 2. For 420px and less:
 
-    - Don't display the subheader on each question. 
+- Don't display the subheader on each question. 
 
     `Location:./client/src/components/LearningModule/Styles.scss`
 
@@ -57,7 +57,7 @@
     }
     ```
 
-    - White container for the answers is removed.
+- White container for the answers is removed.
 
     `Location:./client/src/components/LearningModule/Styles.scss`
 
@@ -83,7 +83,7 @@
     }
     ```
 
-    - Button for answer submission is full-width.
+- Button for answer submission is full-width.
 
     `Location:./client/src/components/LearningModule/Styles.scss`
 
@@ -104,7 +104,7 @@
     }
     ```
 
-    - Center the logo in the navbar.
+- Center the logo in the navbar.
 
     `Location:./client/src/components/Navbar/Styles.scss`
 
@@ -120,7 +120,7 @@
     }
     ```
 
-    - Align the title to the left.
+- Align the title to the left.
 
     `Location:./client/src/components/LearningModule/Styles.scss`
 
