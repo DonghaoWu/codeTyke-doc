@@ -1,4 +1,6 @@
-## Responsive Layout
+## Part 1: Responsive Layout
+
+- #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
 
 1. For 768px and less:
     Answers are arranged in a grid of 2x2 elements.
