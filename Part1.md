@@ -90,7 +90,7 @@
 
     ```scss
     &__submitButtonContainer {
-        width:95%;
+        width:95%; // add
         height: 50px;
 
         .submitButton {
@@ -98,13 +98,13 @@
         }
 
         @media only screen and (max-width: $tablet) {
-            width:85%;
+            width:85%; // add
         }
 
         @media only screen and (max-width: $mobile) {
-            width:90%;
+            width:90%; // add
             .submitButton {
-                float: none;
+                float: none; // add
             }
         }
     }
