@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import axios from 'axios';
 
 import SelectionBox from '../selectionBox/SelectionBox';
@@ -43,7 +43,7 @@ const LearningModule = ({ setGameStatus }) => {
   return (
     <div className="learningModule">
       {currentQuestion.title &&
-        <>
+        <Fragment>
           <div className="learningModule__header">
             <div className="learningModule__title">
               {currentQuestion.title}
@@ -61,7 +61,7 @@ const LearningModule = ({ setGameStatus }) => {
               <Button label="Submit" inactive handleSubmit={handleSubmit} />
             </div>
           </div>
-        </>
+        </Fragment>
       }
     </div>
   )

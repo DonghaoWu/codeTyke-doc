@@ -1,6 +1,13 @@
+@import '../../styles/utils/_breakpoints.scss';
+
 #navbarContainer{
   height: 50px;
   background: black;
+
+  @media only screen and (max-width: $mobile) {
+    display:flex;
+    justify-content: center;
+  }
 }
 
 #navbarContent{
@@ -15,7 +22,6 @@
 }
 
 #navbarContainer{
-
   img{
     height: 30px;
     line-height: 40px;
