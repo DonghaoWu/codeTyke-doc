@@ -1,4 +1,4 @@
-### Responsive Layout
+## Responsive Layout
 
 1. For 768px and less:
 Answers are arranged in a grid of 2x2 elements.
@@ -138,4 +138,4 @@ Answers are arranged in a grid of 2x2 elements.
 ```
 
 #### 备注：
-1. 在本修改中，还有一个修改 html 部分的位置在`/selectionBox/Styles.scss`，增加了一个新的 div -- `calssName='selectionBox__checkboxTextContainer'`，所以要结合两个文件（`SelectionBox.js` 和 `Styles.scss`）才能理解整体的变化。
+1. 在本修改中，还有一个修改 html 部分的位置在`/selectionBox/Styles.scss`，增加了一个新的 div, `className='selectionBox__checkboxTextContainer'`，所以要结合两个文件（`SelectionBox.js` 和 `Styles.scss`）才能理解整体的变化。
