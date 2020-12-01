@@ -4,6 +4,8 @@ import axios from 'axios';
 import SelectionBox from '../selectionBox/SelectionBox';
 import ProgressBar from '../progressBar/ProgressBar';
 import SubmitButton from '../submitButton/SubmitButton';
+import Modal from '../modal/Modal';
+import Info from '../infoModal/InfoModal';
 
 import './Styles.scss';
 
@@ -11,6 +13,7 @@ const LearningModule = ({ setGameStatus }) => {
   const [currentQuestionId, setCurrentQuestionId] = React.useState(0);
   const [quizData, setQuizData] = React.useState({});
   const [loading, setLoading] = React.useState(false);
+  const [modal, setModal] = React.useState(false);
 
   let currentQuestion = quizData.questionArr ? quizData.questionArr[currentQuestionId] : {};
   React.useEffect(() => {
@@ -40,6 +43,10 @@ const LearningModule = ({ setGameStatus }) => {
     }
   }
 
+  const handleSetModal = () => {
+    setModal(!modal);
+  }
+
   let possibleAnswers = [];
   if (currentQuestion.possibleAnswers) {
     possibleAnswers = currentQuestion.possibleAnswers.map((answer, index) => {
@@ -52,10 +59,19 @@ const LearningModule = ({ setGameStatus }) => {
     <div className="learningModule">
       {currentQuestion.title &&
         <Fragment>
+          {
+            modal &&
+            <Modal>
+              <Info handleSetModal={handleSetModal} currentQuestion={currentQuestion} />
+            </Modal>
+          }
           <ProgressBar totalQuestions={quizData.totalQuestions} id={currentQuestion.id} />
           <div className="learningModule__header">
-            <div className="learningModule__title">
-              {currentQuestion.title}
+            <div className="learningModule__titleContainer">
+              <div className="learningModule__title">
+                {currentQuestion.title}
+              </div>
+              <i className="fas fa-info-circle infoIcon" onClick={handleSetModal}></i>
             </div>
             <div className="learningModule__subHeader">
               {currentQuestion.additionalInfo}
