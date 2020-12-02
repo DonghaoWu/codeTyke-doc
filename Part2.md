@@ -2,6 +2,8 @@
 
 - #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
 
+- The advancing progress bar should be animated each time the user advances to the next question.
+
 1. Html part:
 
     - Add component.
