@@ -8,7 +8,7 @@
 
 1. Initiation.
 
-    - Get icon from fontawesome
+    - Get icon from fontawesome.
 
     __`Location:./client/public/index.html`__
 

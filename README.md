@@ -2,7 +2,8 @@
 
 ### Navigation:
 
-- SASS BEM naming: [BEM Naming](http://getbem.com/naming/)
+- Documentation: [BEM Naming](http://getbem.com/naming/)
+- Documentation: [React portals](https://reactjs.org/docs/portals.html#usage)
 
 - [Part1 - Responsive design.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part1.md)
 
