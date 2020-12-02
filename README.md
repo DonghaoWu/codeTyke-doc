@@ -13,4 +13,4 @@
 
 - [Part4 - Add modal.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part4.md)  
 
-- [Part5 - Add selected card color and answer response.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part5.md)   
+- [Part5 - Add Functionality to CodeTyke Multiple Choice Question.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part5.md)   
