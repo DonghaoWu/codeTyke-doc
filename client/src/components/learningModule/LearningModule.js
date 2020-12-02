@@ -15,6 +15,9 @@ const LearningModule = ({ setGameStatus }) => {
   const [loading, setLoading] = React.useState(false);
   const [modal, setModal] = React.useState(false);
 
+  const [selectedAnsArr, setAnswerArr] = React.useState([false, false, false, false]);
+  let hasSelected = selectedAnsArr.includes(true);
+
   let currentQuestion = quizData.questionArr ? quizData.questionArr[currentQuestionId] : {};
   React.useEffect(() => {
     getQuizData();
@@ -83,7 +86,7 @@ const LearningModule = ({ setGameStatus }) => {
               {possibleAnswers}
             </div>
             <div className="learningModule__submitButtonContainer">
-              <SubmitButton label="Submit" handleSubmit={handleSubmit} loading={loading} />
+              <SubmitButton label="Submit" handleSubmit={handleSubmit} loading={loading} hasSelected={hasSelected} />
             </div>
           </div>
         </Fragment>

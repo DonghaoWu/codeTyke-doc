@@ -11,6 +11,10 @@
   padding: 0 2em;
   cursor: pointer;
 
+  &--disabled{
+    background-color: rgb(187, 184, 184);
+  }
+
   &__container{
     width:6rem;
     display: flex;
