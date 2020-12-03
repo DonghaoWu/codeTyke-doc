@@ -8,7 +8,7 @@
 
     1. Get a new props from LearningModule component to control div class and onClick function.
 
-    __`Location:./client/src/components/submitButton/SubmitButton.js`__
+        __`Location:./client/src/components/submitButton/SubmitButton.js`__
 
     ```js
     import React from 'react';
@@ -34,7 +34,7 @@
 
     2. Edit submitButton styling.
 
-    __`Location:./client/src/components/submitButton/Styles.scss`__
+        __`Location:./client/src/components/submitButton/Styles.scss`__
 
     ```css
     &--disabled{
@@ -44,7 +44,7 @@
 
     3. Set hasSelected in LearningModule component and pass it down to SubmitButton component.
 
-    __`Location:./client/src/components/learningModule/LearningModule.js`__
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
 
     ```js
     const [selectedAnsArr, setAnswerArr] = React.useState([false, false, false, false]);
@@ -61,7 +61,7 @@
 
     1. Pass selectedAnsArr, setSelectedAnsArr down to SelectBox component.
 
-    __`Location:./client/src/components/learningModule/LearningModule.js`__
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
 
     ```jsx
     return <SelectionBox answerId={index} key={index} answer={answer} selectedAnsArr={selectedAnsArr} setSelectedAnsArr={setSelectedAnsArr} />
@@ -69,7 +69,7 @@
 
     2. Use `selectedAnsArr[answerId]` to control selected card background color.
 
-    __`Location:./client/src/components/selectBox/SelectBox.js`__
+        __`Location:./client/src/components/selectBox/SelectBox.js`__
 
     ```jsx
     import React, { useEffect } from 'react';
@@ -103,7 +103,7 @@
 
     - scss, when is selected, the back ground color is blue.
 
-    __`Location:./client/src/components/selectBox/Styles.scss`__
+        __`Location:./client/src/components/selectBox/Styles.scss`__
 
     ```scss
     &--active{
@@ -117,7 +117,7 @@
 
     1. Add result info state, pass state and submit button label state.
 
-    __`Location:./client/src/components/learningModule/LearningModule.js`__
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
 
     ```js
     const [resultInfo, setResultInfo] = React.useState('');
@@ -128,7 +128,7 @@
     2. Check answer function and change the result info state.
         - new state: `pass` to control submit button label and functionality.
 
-    __`Location:./client/src/components/learningModule/LearningModule.js`__
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
 
     ```js
     const handleSubmit = () => {
@@ -185,7 +185,7 @@
 
     - Create component.
 
-    __`Location:./client/src/components/resultInfo/ResultInfo.js`__
+        __`Location:./client/src/components/resultInfo/ResultInfo.js`__
 
     ```js
     import React from 'react';
@@ -209,7 +209,7 @@
 
     - ResultInfo styling.
 
-    __`Location:./client/src/components/resultInfo/Styles.js`__
+        __`Location:./client/src/components/resultInfo/Styles.js`__
 
     ```scss
     @import '../../styles/utils/breakpoints';
@@ -239,7 +239,7 @@
 
     - Add ResultInfo into LearningModule component.
 
-    __`Location:./client/src/components/learningModule/LearningModule.js`__
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
 
     ```js
     import ResultInfo from '../resultInfo/ResultInfo';
@@ -252,7 +252,7 @@
 
     - Adjust the submitButtonContainer styling.
 
-    __`Location:./client/src/components/learningModule/Styles.scss`__
+        __`Location:./client/src/components/learningModule/Styles.scss`__
 
     ```scss
     &__submitButtonContainer {
