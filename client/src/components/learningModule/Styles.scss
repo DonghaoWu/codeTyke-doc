@@ -73,6 +73,10 @@
     }
 
     &__submitButtonContainer {
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+
         width:95%;
         height: 50px;
 
@@ -86,6 +90,8 @@
 
         @media only screen and (max-width: $mobile) {
             width:88%;
+            display: block;
+            text-align: center;
             .submitButton {
                 float: none;
             }
