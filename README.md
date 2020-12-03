@@ -2,7 +2,7 @@
 
 - Heroku deployed URL: [https://codetyke-2021.herokuapp.com/](https://codetyke-2021.herokuapp.com/)
 
-- [Back to Front end tools demo](https://github.com/DonghaoWu/Frontend-tools-demo)
+- Back to Front end tools demo:[https://github.com/DonghaoWu/Frontend-tools-demo](https://github.com/DonghaoWu/Frontend-tools-demo)
 
 -----------------------------------------------------------------
 
