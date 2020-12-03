@@ -4,7 +4,7 @@
 
 ----------------------------------------------------------------------------------------------------
 
-1. The button is disable when no answer is selected.
+1. __`The button is disable when no answer is selected.`__
 
     1. Get a new props from LearningModule component to control div class and onClick function.
 
@@ -57,7 +57,7 @@
 
 ----------------------------------------------------------------------------------------------------
 
-2. When checkbox is selected, the card background color turns blue, hasSelected equals true, submit button turns active:
+2. __`When checkbox is selected, the card background color turns blue, hasSelected equals true, submit button turns active:`__
 
     1. Pass selectedAnsArr, setSelectedAnsArr down to SelectBox component.
 
@@ -113,7 +113,7 @@
 
 ----------------------------------------------------------------------------------------------------
 
-3. Check the answer, show result info, if the answer is correct, the label in Submit button turns to 'Next', when finish the last question, it will show 'Finish'
+3. __`Check the answer, show result info, if the answer is correct, the label in Submit button turns to 'Next', when finish the last question, it will show 'Finish'`__
 
     1. Add result info state, pass state and submit button label state.
 
@@ -282,7 +282,9 @@
     }
     ```
 
-4. Handle card background color response and reselection.
+----------------------------------------------------------------------------------------------------
+
+4. __`Handle card background color response and reselection.`__
 
 ### 备注：
 
