@@ -69,7 +69,7 @@
 
     2. Use `selectedAnsArr[answerId]` to control selected card background color.
 
-        __`Location:./client/src/components/selectBox/SelectBox.js`__
+        __`Location:./client/src/components/selectionBox/SelectionBox.js`__
 
     ```jsx
     import React, { useEffect } from 'react';
@@ -103,7 +103,7 @@
 
     - scss, when is selected, the back ground color is blue.
 
-        __`Location:./client/src/components/selectBox/Styles.scss`__
+        __`Location:./client/src/components/selectionBox/Styles.scss`__
 
     ```scss
     &--active{
@@ -370,6 +370,8 @@
 
     4. Process the mode props in SelectionBox.
 
+        __`Location:./client/src/components/selectionBox/SelectionBox.js`__
+
     ```jsx
     import React from 'react';
 
@@ -410,6 +412,8 @@
 
     5. Add related styling.
 
+        __`Location:./client/src/components/selectionBox/Styles.scss`__
+
     ```scss
     &--normal{
       background-color: #00B3FF;
@@ -437,5 +441,7 @@
 
     + const [selectedAnsArr, setSelectedAnsArr] = React.useState([false, false, false, false]);
     ```
+
+2. 在本章中，有两个文件在整个过程中会有多处修改，这两个是：__`LearningModule.js`__ 和 __`SelectionBox.js`__,实际操作时要多看有没有遗漏的地方，本章也是整个部分最复杂的一节，可以多参考和改善。
 
 - #### Click here: [BACK TO NAVIGASTION](https://github.com/DonghaoWu/codeTyke-doc/blob/main/README.md)
