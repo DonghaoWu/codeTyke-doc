@@ -30,8 +30,20 @@
 
     input { position: absolute; left: 4px;}
 
-    &--active{
+    &--normal{
       background-color: #00B3FF;
+    }
+
+    &--tryAgain{
+      background-color: #FE8A95;
+    }
+
+    &--notAll{
+      background-color: #FCA51E;
+    }
+
+    &--correct{
+      background-color: #30CC71;
     }
 
     @media only screen and (max-width: $tablet) {

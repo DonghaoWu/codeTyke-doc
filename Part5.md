@@ -286,6 +286,148 @@
 
 4. __`Handle card background color response and reselection.`__
 
+    1. Add mode state.
+
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
+
+    ```js
+    const [mode, setMode] = React.useState('normal');
+    ```
+
+    2. Pass mode and setMode to SelectionBox component.
+
+    ```jsx
+    <SelectionBox
+        answerId={index}
+        key={index}
+        answer={answer}
+        selectedAnsArr={selectedAnsArr}
+        setSelectedAnsArr={setSelectedAnsArr}
+        mode={mode}
+        setMode={setMode} 
+    />
+    ```
+
+    3. Set differnet mode after check the answer.
+
+        __`Location:./client/src/components/learningModule/LearningModule.js`__
+
+    ```jsx
+    const handleSubmit = () => {
+        if (pass === true) {
+            setPass(false);
+            setResultInfo('');
+            setSubmitLabel('Submit');
+            setMode('normal');
+            setSelectedAnsArr([false, false, false, false]);
+
+            if (currentQuestionId === quizData.totalQuestions - 1) {
+                setCurrentQuestionId(0);
+                setGameStatus({ message: "Great Job! Play again.", loadIntro: true });
+            }
+            else {
+                setCurrentQuestionId(currentQuestionId + 1);
+            }
+        }
+
+        else if (pass === false) {
+            setSubmitLoading(true);
+            setTimeout(() => {
+                let selectedCorrectAnswerNum = 0;
+                let selectedWrongAnswer = false;
+
+                for (let i = 0; i < currentQuestion.possibleAnswers.length; i++) {
+                    if (currentQuestion.possibleAnswers[i].isCorrect === selectedAnsArr[i]) selectedCorrectAnswerNum++;
+                    if (currentQuestion.possibleAnswers[i].isCorrect === false && selectedAnsArr[i] === true) {
+                        selectedWrongAnswer = true;
+                        break;
+                    }
+                }
+
+                if (selectedWrongAnswer) {
+                    setMode('tryAgain');
+                    setPass(false);
+                    setResultInfo('Try again.');
+                }
+                else if (selectedCorrectAnswerNum !== currentQuestion.possibleAnswers.length) {
+                    setMode('notAll');
+                    setResultInfo('Not all.');
+                    setPass(false);
+                }
+                else if (selectedCorrectAnswerNum === currentQuestion.possibleAnswers.length) {
+                    setMode('correct');
+                    setPass(true);
+                    setResultInfo('Correct!');
+                    if (currentQuestionId === quizData.totalQuestions - 1) setSubmitLabel('Finish');
+                    else setSubmitLabel('Next');
+                }
+                
+                setSubmitLoading(false);
+            }, 500)
+        }
+    }
+    ```
+
+    4. Process the mode props in SelectionBox.
+
+    ```jsx
+    import React from 'react';
+
+    import './Styles.scss';
+
+    const SelectionBox = (props) => {
+    const { selectedAnsArr, setSelectedAnsArr, answerId, mode, setMode } = props;
+    const isChecked = selectedAnsArr[answerId];
+    const activeMode = isChecked ? `selectionBox--${mode}` : '';
+
+    const handleSelect = () => {
+        let newSelectedAnsArr = [];
+        if (mode !== 'normal') {
+            setMode('normal');
+            newSelectedAnsArr = [false, false, false, false];
+            newSelectedAnsArr[answerId] = true;
+        }
+        else {
+            newSelectedAnsArr = selectedAnsArr.slice();
+            newSelectedAnsArr[answerId] = !isChecked;
+        }
+        setSelectedAnsArr(newSelectedAnsArr);
+    }
+
+        return (
+            <div className={`selectionBox ${activeMode}`}>
+                <img className="selectionBox__image" alt={props.answer.imageAlt} src={props.answer.image} />
+                <div className='selectionBox__checkboxTextContainer'>
+                    <input className={`selectionBox__checkbox`} type="checkbox" checked={isChecked} onChange={handleSelect} />
+                    <span className="selectionBox__text">{props.answer.text}</span>
+                </div>
+            </div>
+        )
+    }
+
+    export default SelectionBox;
+    ```
+
+    5. Add related styling.
+
+    ```scss
+    &--normal{
+      background-color: #00B3FF;
+    }
+
+    &--tryAgain{
+      background-color: #FE8A95;
+    }
+
+    &--notAll{
+      background-color: #FCA51E;
+    }
+
+    &--correct{
+      background-color: #30CC71;
+    }
+    ```
+
 ### 备注：
 
 1. 改名：

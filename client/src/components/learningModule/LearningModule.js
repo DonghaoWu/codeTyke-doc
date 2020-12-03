@@ -19,7 +19,9 @@ const LearningModule = ({ setGameStatus }) => {
   const [pass, setPass] = React.useState(false);
   const [submitLabel, setSubmitLabel] = React.useState('Submit');
   const [selectedAnsArr, setSelectedAnsArr] = React.useState([false, false, false, false]);
-  
+
+  const [mode, setMode] = React.useState('normal');
+
   const hasSelected = selectedAnsArr.includes(true);
 
   let currentQuestion = quizData.questionArr ? quizData.questionArr[currentQuestionId] : {};
@@ -42,6 +44,7 @@ const LearningModule = ({ setGameStatus }) => {
       setPass(false);
       setResultInfo('');
       setSubmitLabel('Submit');
+      setMode('normal');
       setSelectedAnsArr([false, false, false, false]);
 
       if (currentQuestionId === quizData.totalQuestions - 1) {
@@ -68,17 +71,20 @@ const LearningModule = ({ setGameStatus }) => {
         }
 
         if (selectedWrongAnswer) {
-          setResultInfo('Try again.');
           setPass(false);
+          setResultInfo('Try again.');
+          setMode('tryAgain');
         }
         else if (selectedCorrectAnswerNum !== currentQuestion.possibleAnswers.length) {
+          setMode('notAll');
           setResultInfo('Not all.');
           setPass(false);
         }
         else if (selectedCorrectAnswerNum === currentQuestion.possibleAnswers.length) {
           setPass(true);
           setResultInfo('Correct!');
-          if (currentQuestionId === quizData.totalQuestions - 1) setSubmitLabel('Finish!');
+          setMode('correct');
+          if (currentQuestionId === quizData.totalQuestions - 1) setSubmitLabel('Finish');
           else setSubmitLabel('Next');
         }
         setSubmitLoading(false);
@@ -93,7 +99,14 @@ const LearningModule = ({ setGameStatus }) => {
   let possibleAnswers = [];
   if (currentQuestion.possibleAnswers) {
     possibleAnswers = currentQuestion.possibleAnswers.map((answer, index) => {
-      return <SelectionBox answerId={index} key={index} answer={answer} selectedAnsArr={selectedAnsArr} setSelectedAnsArr={setSelectedAnsArr} />
+      return <SelectionBox
+        answerId={index}
+        key={index}
+        answer={answer}
+        selectedAnsArr={selectedAnsArr}
+        setSelectedAnsArr={setSelectedAnsArr}
+        mode={mode}
+        setMode={setMode} />
     })
   }
 
