@@ -4,8 +4,6 @@
 
 - Back to Front end tools demo:[https://github.com/DonghaoWu/Frontend-tools-demo](https://github.com/DonghaoWu/Frontend-tools-demo)
 
------------------------------------------------------------------
-
 ### Navigation:
 
 - Documentation: [BEM Naming](http://getbem.com/naming/)
