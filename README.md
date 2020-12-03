@@ -1,5 +1,7 @@
 # codeTyke-doc
 
+- Heroku deployed URL: [https://codetyke-2021.herokuapp.com/](https://codetyke-2021.herokuapp.com/)
+
 ### Navigation:
 
 - Documentation: [BEM Naming](http://getbem.com/naming/)
@@ -13,4 +15,4 @@
 
 - [Part4 - Add modal.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part4.md)  
 
-- [Part5 - Add Functionality to CodeTyke Multiple Choice Question.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part5.md)   
+- [Part5 - Add Functionality to CodeTyke Multiple Choice Question.](https://github.com/DonghaoWu/codeTyke-doc/blob/main/Part5.md)
