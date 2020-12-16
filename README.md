@@ -1,10 +1,28 @@
 # codeTyke-doc
 
+<p align="center">
+<img src="./assets/codetyke-01.png" width=85%>
+</p>
+
+--------------------------------------------------------------
+
+<p align="center">
+<img src="./assets/codetyke-02.png" width=85%>
+</p>
+
+--------------------------------------------------------------
+
+<p align="center">
+<img src="./assets/codetyke-03.png" width=85%>
+</p>
+
+--------------------------------------------------------------
+
 - Heroku deployed URL: [https://codetyke-2021.herokuapp.com/](https://codetyke-2021.herokuapp.com/)
 
 - Deployed repo: [https://github.com/DonghaoWu/codeTyke-heroku](https://github.com/DonghaoWu/codeTyke-heroku)
 
-- Back to Front end tools demo:[https://github.com/DonghaoWu/Frontend-tools-demo](https://github.com/DonghaoWu/Frontend-tools-demo)
+- Back to Front end tools demo: [https://github.com/DonghaoWu/Frontend-tools-demo](https://github.com/DonghaoWu/Frontend-tools-demo)
 
 ### Navigation:
 
